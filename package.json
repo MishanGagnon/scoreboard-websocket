@@ -1,0 +1,21 @@
+{
+  "name": "scoreboardwebsocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "localtunnel": "^2.0.1",
+    "websocket": "^1.0.34",
+    "ws": "^8.2.1"
+  },
+  "engines": {
+    "node": "15.12"
+  }
+}

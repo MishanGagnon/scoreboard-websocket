@@ -1,0 +1,212 @@
+div{display: flex;}
+body { 
+    aspect-ratio: 16/9;
+    font-family: proxima-nova,'Helvetica Neue',sans-serif;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-size: 20px;
+}
+#flag{
+    width: 85%;
+    height: 85%;
+    z-index: -1;
+    transform: translate(7.3%,19.9%);
+}
+
+.behind {
+    z-index: -1;
+}
+.overlayImage{
+    aspect-ratio: 16/9;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+.scoreButton{
+    width: 50px;
+    height: 25px
+}
+.scoreContainer{
+    position: fixed;
+}
+.scoresContainerContainer {
+    aspect-ratio: 16/9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.scoreOneContainer{
+    position: relative;
+    text-align: center;
+    top: 79.4%;
+    left: 36.5%;
+    width: 4vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: rgb(37, 37, 37);
+    font-size: 1.2vw;
+}
+h1{ 
+    margin: 0px;
+}
+
+.scoreTwoContainer{
+    position: relative;
+    text-align: center;
+    top: 79.4%;
+    left: 53.1%;
+    width: 4vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: rgb(37, 37, 37);
+    font-size: 1.2vw;
+}
+.scoreThreeContainer{
+    position: relative;
+    text-align: center;
+    top: 80%;
+    left: 53.7%;
+    width: 4vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-size: .9vw;
+}
+#teamOnePreview{
+    text-align: center;
+}
+.downsAndYardsContainer{
+    position: relative;
+    text-align: center;
+    top: 79.4%;
+    left: 54%;
+    width: 15vw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2vw;
+
+}
+.incrementers{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.upFromBelow{
+    animation-name: upFromBelow;
+    animation-delay: 0s;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0,.92,.3,1.02);
+    animation-fill-mode: forwards;
+}
+.downFromBelow{
+    animation-name: upAndFade;
+    animation-delay: 0s;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0,.92,.3,1.02);
+    animation-fill-mode: forwards;
+}
+
+.upFromBelowSmall{
+    animation-name: upFromBelowSmall;
+    animation-delay: 0s;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0,.92,.3,1.02);
+    animation-fill-mode: forwards;
+}
+.downFromBelowSmall{
+    animation-name: upAndFadeSmall;
+    animation-delay: 0s;
+    animation-duration: .5s;
+    animation-timing-function: cubic-bezier(0,.92,.3,1.02);
+    animation-fill-mode: forwards;
+}
+
+.flag{
+    animation-name: flag;
+    animation-delay: 0s;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0,.42,0,1);
+    animation-fill-mode: forwards;
+}
+@keyframes upAndFade{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        opacity: 0%;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes upFromBelow{
+    from{
+        opacity: 0%;
+        transform: translateY(40px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes upAndFadeSmall{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        opacity: 0%;
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes upFromBelowSmall{
+    from{
+        opacity: 0%;
+        transform: translateY(35px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes flag{
+    0%{
+        transform: translate(7.3%,19.9%);
+    }
+    25%{
+        transform: translate(7.3%,14.2%);
+    }
+    50%{
+        transform: translate(7.3%,14.2%);
+    }
+    100%{
+        transform: translate(7.3%,19.9%);
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .scoresContainerContainer{
+        flex-direction: column;
+    }
+    .scoreContainer{
+        flex-direction: column;
+    }
+    .incrementers{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .iterator{
+        flex-direction: column-reverse;
+    }
+} 

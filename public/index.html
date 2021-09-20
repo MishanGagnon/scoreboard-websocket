@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Scoreboard Control Panel</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class = scoresContainerContainer>
+        <div class = iterator>
+            <div class="iteratorInput">
+                <h4>Change By</h4   >
+                <input type="number" id="iterator" placeholder = "0">
+            </div>
+            <div>
+                <button id = "qrButton" onclick="createQR()">Generate QR Code</button>
+                <img id = "qr">
+            </div>
+            <div class = "iterator">
+                <button onclick = "reset()">Reset Scores</button>
+            </div>
+            <div>
+                <button class = "flag" onclick = "sendFlag()">Flag</button>
+            </div>
+        </div>
+        <div class = "incrementers">
+            <div class = scoreContainer>
+                <button class = scoreButton onclick= "sendMessage(1, 0)">▲</button>
+                <h1 id = teamOneScore>0</h1>
+                <button class = scoreButton onclick= "sendMessage(-1, 0)">▼</button>
+            </div>
+            <div class = scoreContainer>
+                <button class = scoreButton onclick= "sendMessage(1, 1)">▲</button>
+                <h1 id = teamTwoScore>0</h1>
+                <button class = scoreButton onclick= "sendMessage(-1, 1)">▼</button>
+            </div>
+            <div class = scoreContainer>
+                <button class = scoreButton onclick= "updateQuarter(1)">▲</button>
+                <h1 id = quarter>1st</h1>
+                <button class = scoreButton onclick= "updateQuarter(-1)">▼</button>
+            </div>
+        </div>
+        <div class = downsAndYardsContainer>
+            <div>
+                <input type="text" name="" id="downsAndYardsInput" placeholder="Downs and Yards">
+                <button onclick = "setDownsAndYards()" >Submit</button>
+            </div>
+            <div>
+                <h1 id = "downsAndYardsPreview">1st and 10</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src = "websocket.js"></script>
+</html>

@@ -1,0 +1,77 @@
+.scoreButton{
+    width: 50px;
+    height: 25px
+}
+.scoreContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+.scoresContainerContainer {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+    font-size: 12px;
+}
+.iterator{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+#iterator{
+    width: 30px;
+    margin: 10px;
+}
+.iteratorInput{
+    display: flex;
+    flex-direction: row;
+}
+.downsAndYardsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#downsAndYardsPreview{
+    margin: 10px;
+    font-size: 20px;
+}
+#teamOneScore, #teamTwoScore, #quarter{
+    height: 60px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.incrementers{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+.flag{
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 600px){
+    .scoresContainerContainer{
+        flex-direction: column;
+    }
+    .scoreContainer{
+        flex-direction: column;
+    }
+    .incrementers{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .iterator{
+        flex-direction: column-reverse;
+    }
+} 
