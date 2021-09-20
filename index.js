@@ -66,26 +66,5 @@ wss.on('connection', function connection(ws) {
   });
 
 
-  const { networkInterfaces } = require('os');
 
-  const nets = networkInterfaces();
-  const results = {}
-  
-  for (const name of Object.keys(nets)) {
-      for (const net of nets[name]) {
-          if (net.family === 'IPv4' && !net.internal) {
-              if (!results[name]) {
-                  results[name] = [];
-              }
-  
-              results[name].push(net.address);
-          }
-      }
-  }
-  console.log(results["en0"][0])
-
-app.use(express.static(path.join(__dirname, 'public'),{extensions:['html']}))
-
-
-
-server.listen(3000,'localhost',()=> console.log("listening on " + results["en0"][0] + ":3000"))
+server.listen(3000,'localhost',()=> console.log("listening on port 3000"))
